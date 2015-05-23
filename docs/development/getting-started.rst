@@ -1,15 +1,24 @@
 Getting started
 ===============
 
-Working on Warehouse requires the installation of
-`Docker Compose <https://docs.docker.com/compose/>`_, which Warehouse uses to
-automate setting up a development environment that includes all of the required
-external services. You can install Docker Compose using their provided
-`installation instructions <https://docs.docker.com/compose/install/>`_.
+Working on Warehouse requires setting up a suitable development enviroment.
+We have created a process for setting up a development environment container
+to ease contributor setup time and improve set up of required dependencies.
 
-Once you have Docker Compose installed, you also want to have `tox`_ installed.
-This is a Python program which can be installed simply with `pip`_ using
-``pip install tox``.
+Currently, Warehouse uses Docker and
+`Docker Compose <https://docs.docker.com/compose/>`_ to automate setting up
+a development environment that includes all of the required
+external services. The basic steps for setting up the development environment:
+
+* You will need to fork and clone the source code from GitHub
+
+* You will need to install Docker for your operating system.
+
+* You can install Docker Compose using their provided
+  `installation instructions <https://docs.docker.com/compose/install/>`_.
+
+* You will want to have `tox`_ installed. This is a Python program which can be
+  installed simply with `pip`_ using ``pip install tox``.
 
 You are now ready to run Warehouse itself, run the tests, and build the
 documentation.
@@ -160,10 +169,10 @@ versions installed, in which case you will see one or more
 Building documentation
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The Warehouse documentation is stored in the ``docs/`` directory. It is written
-in `reStructured Text`_ and rendered using `Sphinx`_.
+The Warehouse documentation source code is stored in the ``docs/`` directory.
+Documentation is written in `reStructuredText`_ and rendered using `Sphinx`_.
 
-Use `tox`_ to build the documentation. For example:
+Use `tox`_ to build the documentation and run the doctests. For example:
 
 .. code-block:: console
 
@@ -173,10 +182,12 @@ Use `tox`_ to build the documentation. For example:
     congratulations :)
 
 The HTML documentation index can now be found at
-``docs/_build/html/index.html``.
+``docs/_build/html/index.html``. Loading this file into a browser will
+display a local instance of the documentation.
+
 
 .. _`tox`: https://pypi.python.org/pypi/tox
 .. _`pip`: https://pypi.python.org/pypi/pip
 .. _`sphinx`: https://pypi.python.org/pypi/Sphinx
-.. _`reStructured Text`: http://sphinx-doc.org/rest.html
+.. _`reStructuredText`: http://sphinx-doc.org/rest.html
 .. _`npm`: https://nodejs.org/
